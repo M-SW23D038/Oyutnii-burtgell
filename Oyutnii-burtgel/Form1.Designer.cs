@@ -115,6 +115,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(151, 27);
             dateTimePicker1.TabIndex = 7;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // button1
             // 
@@ -145,6 +146,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // listView1
             // 
@@ -210,6 +212,7 @@
             Controls.Add(textBox1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
