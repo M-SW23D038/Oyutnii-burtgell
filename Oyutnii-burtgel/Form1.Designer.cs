@@ -38,12 +38,12 @@
             dateTimePicker1 = new DateTimePicker();
             button1 = new Button();
             listBox1 = new ListBox();
-            pictureBox1 = new PictureBox();
             listView1 = new ListView();
             treeView1 = new TreeView();
             richTextBox1 = new RichTextBox();
             linkLabel1 = new LinkLabel();
             progressBar1 = new ProgressBar();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -138,17 +138,6 @@
             listBox1.Size = new Size(150, 104);
             listBox1.TabIndex = 9;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources._62A08C29_CBA0_4D1F_A933_FF44864DAB9B;
-            pictureBox1.Location = new Point(194, 189);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(150, 128);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            // 
             // listView1
             // 
             listView1.Location = new Point(402, 66);
@@ -189,6 +178,16 @@
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(623, 32);
             progressBar1.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(194, 189);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(150, 128);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // Form1
             // 
@@ -232,11 +231,11 @@
         private DateTimePicker dateTimePicker1;
         private Button button1;
         private ListBox listBox1;
-        private PictureBox pictureBox1;
         private ListView listView1;
         private TreeView treeView1;
         private RichTextBox richTextBox1;
         private LinkLabel linkLabel1;
         private ProgressBar progressBar1;
+        private PictureBox pictureBox1;
     }
 }
