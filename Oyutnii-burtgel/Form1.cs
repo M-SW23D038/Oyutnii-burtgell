@@ -60,9 +60,12 @@
 
             
             listBox1.Items.Clear();
-            listBox1.Items.AddRange(new object[] { "Могол", "Англи", "Орос", "Хятад", "Япон", "Солонгос" });
+            listBox1.Items.AddRange(new object[] { "Монгол", "Англи", "Орос", "Хятад", "Япон", "Солонгос" });
 
-            
+
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+
             treeView1.Nodes.Clear();
             TreeNode rootNode = treeView1.Nodes.Add("Мэдээлэл зүйн тэнхим");
             rootNode.Nodes.Add("Компьютерын ухаан");
@@ -135,19 +138,27 @@
             lvi.SubItems.Add(nas);
             listView1.Items.Add(lvi);
 
-           
-            richTextBox1.Text = $"--- БҮРТГЭГДСЭН ОЮУТАН ---\n" +
-                                $"Код: {kod}\n" +
-                                $"Утас: {utas}\n" +
-                                $"Нас: {nas}\n" +
-                                $"Төрсөн өдөр: {torsonOdor}\n" +
-                                $"Сургалт: {surgalt}\n" +
-                                $"Тэнхим: {tenkhim}\n" +
-                                $"Тэтгэлэг: {tetgeleg}\n" +
-                                $"Хичээл: {hicheeluud}\n" +
-                                $"Хэл: {hel}";
 
-            
+
+
+            richTextBox1.Clear();
+            richTextBox1.SelectionColor = Color.DarkBlue;
+            richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
+            richTextBox1.AppendText("--- БҮРТГЭГДСЭН ОЮУТАН ---\n");
+
+            richTextBox1.SelectionColor = Color.Green;
+            richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+            richTextBox1.AppendText($"Код: {kod}\n" +
+                                        $"Утас: {utas}\n" +
+                                        $"Нас: {nas}\n" +
+                                        $"Төрсөн өдөр: {torsonOdor}\n" +
+                                        $"Сургалт: {surgalt}\n" +
+                                        $"Тэнхим: {tenkhim}\n" +
+                                        $"Тэтгэлэг: {tetgeleg}\n" +
+                                        $"Хичээл: {hicheeluud}\n" +
+                                        $"Хэл: {hel}");
+
+
             progressBar1.Value = 100;
         }
 

@@ -166,10 +166,10 @@
             linkLabel1.AutoSize = true;
             linkLabel1.Location = new Point(411, 21);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(64, 20);
+            linkLabel1.Size = new Size(73, 20);
             linkLabel1.TabIndex = 14;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "Цэвэлэх";
+            linkLabel1.Text = "Цэвэрлэх";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // progressBar1
@@ -181,6 +181,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Image = Properties.Resources.images;
             pictureBox1.Location = new Point(194, 189);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(150, 128);
