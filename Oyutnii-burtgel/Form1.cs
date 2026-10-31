@@ -14,7 +14,13 @@
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            textBox1.Clear();
+            maskedTextBox1.Clear();
+            comboBox1.SelectedIndex = 0;
+            checkBox1.Checked = false;
+            pictureBox1.Image = null;
+            numericUpDown1.Value = numericUpDown1.Minimum;
+            richTextBox1.Clear();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,6 +50,31 @@
                     pictureBox1.Image = Image.FromFile(ofd.FileName);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string kod = textBox1.Text;
+            string utas = maskedTextBox1.Text;
+            string nas = numericUpDown1.Value.ToString();
+            string tenkhim = comboBox1.SelectedItem?.ToString() ?? "";
+
+            if (string.IsNullOrWhiteSpace(kod))
+            {
+                MessageBox.Show("Оюутны кодоо оруулна уу!", "Анхааруулга", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ListView рүү мэдээлэл нэмэх
+            ListViewItem item = new ListViewItem(kod);
+            item.SubItems.Add(utas);
+            item.SubItems.Add(nas);
+            listView1.Items.Add(item);
+
+            // дэлгэрэнгүй харуулах
+            richTextBox1.Text = $"--- БҮРТГЭГДСЭН ОЮУТАН ---\nКод: {kod}\nУтас: {utas}\nНас: {nas}\nТэнхим: {tenkhim}";
+
+            progressBar1.Value = 100;
         }
     }
 }

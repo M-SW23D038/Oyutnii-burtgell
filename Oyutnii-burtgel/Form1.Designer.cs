@@ -127,6 +127,7 @@
             button1.TabIndex = 8;
             button1.Text = "Бүртгэх";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // listBox1
             // 
